@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functional PHP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- jQuery + history plugin -->
+    <script type="text/javascript" src="src/jquery.min.js"></script>
+    <script type="text/javascript" src="src/jquery.history.js"></script>
+
+    <!-- Slippy core js file -->
+    <script type="text/javascript" src="src/slippy.js"></script>
+
+    <!-- Slippy structural styles -->
+    <link type="text/css" rel="stylesheet" href="src/slippy.css"/>
+
+    <!-- Slippy theme (feel free to change it) -->
+    <link type="text/css" rel="stylesheet" href="src/slippy-pure.css"/>
+
+    <!-- Specific styles for this presentation -->
+    <link type="text/css" rel="stylesheet" href="multihead.css"/>
+
+    <!-- Syntax highlighting core file  -->
+    <script type="text/javascript" src="src/highlighter/shCore.js"></script>
+
+    <!-- Syntax highlighting brushes, this one is only for javascript -->
+    <script type="text/javascript" src="src/highlighter/shBrushPhp.js"></script>
+    <script type="text/javascript" src="src/highlighter/shBrushPlain.js"></script>
+    <script type="text/javascript" src="src/highlighter/shBrushJScript.js"></script>
+
+    <!-- Syntax highlighting core CSS and a theme -->
+    <link type="text/css" rel="stylesheet" href="src/highlighter/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="src/highlighter/shThemeEclipse.css"/>
+
+    <script type="text/javascript">
+      $(function() {
+          $(".slide").slippy({
+            animLen: 0,
+            margin: 0.05
+          });
+          SyntaxHighlighter.all();
+      });
+    </script>
+
+  </head>
+  <body>
+
+<section class="slide" id="session-title" data-background="images/first-slide.png">
+  <div style="background-color: wheat; margin-top: 60%; padding: 0.25em;">
+    <h1 style="">Multi-Headed Drupal</h1>
+    <h2>by Larry Garfield</h2>
+    <h2>Tuesday 21 August 2012</h2>
+  </div>
+</section>
+
+<div class="footer">
+  <span class="right"><a href="http://www.garfieldtech.com/">http://www.garfieldtech.com/</a></span>
+  <span style="text-align: center">DrupalCon Munich 2012</span>
+  <span class="left"><a href="http://munich2012.drupal.org/">http://munich2012.drupal.org/</a></span>
+  <hr class="defloat" />
+</div>
+
+<section class="slide">
+  <h1>@Crell</h1>
+  <div style="width: 50%; float: right; ">
+    <img style="max-width: 100%; height: auto;" src="images/crell-nerf.jpg" />
+  </div>
+
+  <ul>
+    <li>Senior Architect, Palantir.net</li>
+    <li>Drupal Association Advisor</li>
+    <li>Web Services & Context Initiative Owner</li>
+    <li>Co-Author,<br /><em>Drupal 7 Module Development</em>,<br />Packt Publishing</li>
+    <li>Architectural Gadfly</li>
+    <li>Nerf Gunslinger</li>
+  </ul>
+
+  <img style="margin-top: 2em;" src="images/palantir.png" />
+</section>
+
+<section class="slide">
+  <h1>What we do</h1>
+  <img style="position: absolute; top: 30px; left: -100px;" src="images/sites/barnard-1.jpg" />
+  <img style="position: absolute; top: 60px; left: -70px;" class="incremental" src="images/sites/foreign-affairs-1.jpg" />
+  <img style="position: absolute; top: 90px; left: -40px;" class="incremental" src="images/sites/fieldmuseum-1.jpg" />
+  <img style="position: absolute; top: 120px; left: -10px;" class="incremental" src="images/sites/opensource-1.jpg" />
+  <img style="position: absolute; top: 150px; left: 20px;" class="incremental" src="images/sites/marketplace-1.jpg" />
+</section>
+
+<section class="slide" data-background="images/last-slide.png">
+
+  <div class="vcenter" style="background-color: wheat;">
+    <h1>What did you think?</h1>
+    <h2 style="margin-top: 1em;">Locate this session on the DrupalCon Munich website</h2>
+    <h3 style="margin-top: 1em; text-align: center;"><a href="http://munich2012.drupal.org/program/sessions/functional-php">http://munich2012.drupal.org/program/sessions/functional-php</a></h3>
+    <h2 style="margin-top: 1em;">Thank you!</h2>
+  </div>
+</section>
+
+<section class="slide">
+  <h1>Title</h1>
+  <div class="incremental" style="float: left">
+    <h2>Title</h2>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="incremental" style="float: left">
+    <h2>Title</h2>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div style="clear: all">
+  </div>
+</section>
+
+<section class="slide">
+  <h1>Title</h1>
+  <div>Description</div>
+
+  <table class="visible" style="width: 100%; border: 1px solid black;">
+    <thead>
+      <tr><th>Method</th> <th>Path</th> <th>Accept header</th> <th>Result</th></tr>
+    </thead>
+    <tbody>
+      <tr class="incremental"><td>GET</td> <td>node/1</td> <td>text/html</td> <td class="incremental"><strong>Node view page</strong></td></tr>
+      <tr class="incremental"><td>GET</td> <td>node/1</td> <td>application/json</td> <td class="incremental"><strong>JSON-LD record</strong></td></tr>
+      <tr class="incremental"><td>POST</td> <td>system/form/node_edit</td> <td>text/html</td> <td class="incremental"><strong>Submit a node form and redirect</strong></td></tr>
+      <tr class="incremental"><td>PUT</td> <td>node/1</td> <td>application/json</td> <td class="incremental"><strong>Overwrite the node exactly</strong></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="slide">
+  <h1 class="vcenter">Questions?</h1>
+</section>
+
+  </body>
+</html>
