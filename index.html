@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Functional PHP</title>
+    <title>Multi-Headed Drupal</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <!-- jQuery + history plugin -->
@@ -49,7 +49,7 @@
   <div style="background-color: wheat; margin-top: 60%; padding: 0.25em;">
     <h1 style="">Multi-Headed Drupal</h1>
     <h2>by Larry Garfield</h2>
-    <h2>Tuesday 21 August 2012</h2>
+    <h2>Thursday 23 August 2012</h2>
   </div>
 </section>
 
@@ -87,6 +87,143 @@
   <img style="position: absolute; top: 150px; left: 20px;" class="incremental" src="images/sites/marketplace-1.jpg" />
 </section>
 
+<section class="slide">
+  <h1>Multi-Headed Drupal</h1>
+  <div class="vcenter" style="text-align: center;">
+    <img style="width: 50%" src="images/pnet-multi-head-illo.jpg"  />
+  </div>
+</section>
+
+<section class="slide">
+  <h1>Case study</h1>
+  <h2>Drupal University</h2>
+  <ul>
+    <li class="incremental">3 Colleges</li>
+    <li class="incremental">4 Departments each</li>
+    <li class="incremental">Over-worked IT department wants to keep things simple and centralized</li>
+    <li class="incremental">Departments want to be special snowflakes</li>
+  </ul>
+  <h2 class="incremental" style="margin-top: 2em;">I hate my life...</h2>
+</section>
+
+<section class="slide">
+  <div class="vcenter">
+    <h2>How do we do that?</h2>
+    <h2>Let us count the ways...</h2>
+  </div>
+</section>
+
+
+<section class="slide">
+  <div class="vcenter">
+    <h2>The purpose of this session is to confuse you with options, then unconfuse you with guidelines</h2>
+  </div>
+</section>
+
+<section class="slide">
+    <h1>Not rules, more like guidelines</h1>
+    <div class="vcenter" style="text-align: center;">
+      <img style="width: 40%;" src="images/barbosa.gif" data-credit="http://www.killerfilm.com/articles-2/read/captain-barbados-confirmed-for-pirates-4-14377" />
+    </div>
+</section>
+
+
+<section class="slide">
+  <h1 class="vcenter">Separate sites</h1>
+</section>
+
+<div style="display: none">
+  Talk about separate sites.
+</div>
+
+
+<section class="slide">
+  <h1>Multi-site</h1>
+  <img class="vcenter" src="images/multisite.png"  />
+</section>
+
+<div style="display: none">
+  Talk about multi-site.  Sub-types: Features, Install Profiles.
+</div>
+
+
+<section class="slide">
+  <h1>Domain Access</h1>
+  <img class="vcenter" src="images/domainaccess.png"  />
+</section>
+
+<div style="display: none">
+  Talk about Domain Access.  Needs screen shots.  (Oh fuck...)
+</div>
+
+
+<section class="slide">
+  <h1>Organic Groups</h1>
+  <img class="vcenter" src="images/organicgroups.png"  />
+</section>
+
+<div style="display: none">
+  Talk about Organic Groups.
+</div>
+
+<section class="slide">
+  <h1 class="vcenter">Single-site</h1>
+</section>
+
+<div style="display: none">
+  Talk about Single site: Workbench Access, Panels Everywhere.
+</div>
+
+
+<div style="display: none">
+  Talk about trade-offs.
+</div>
+
+<div style="display: none">
+  Trade-off-chart.
+</div>
+
+<div style="display: none">
+  Decision tree.
+</div>
+
+<section class="slide">
+  <h1>Decisions, decisions...</h1>
+
+  <table class="visible" style="width: 100%; border: 1px solid black;">
+    <thead>
+      <tr><th>If you want...</th> <th>Probably means...</th></tr>
+    </thead>
+    <tbody>
+      <tr class="incremental"><td>Multiple core versions</td> <td class="incremental">Separate installs</td></tr>
+      <tr class="incremental"><td>Different content types</td> <td class="incremental">Separate installs, multi-site</td></tr>
+      <tr class="incremental"><td>Single user base</td> <td class="incremental">Domain Access, OG, Single-site</td></tr>
+      <tr class="incremental"><td>Subdomains</td> <td class="incremental">Separate installs, multi-site, Domain Access</td></tr>
+      <tr class="incremental"><td>One domain</td> <td class="incremental">OG, Single-site</td></tr>
+      <tr class="incremental"><td>Department autonomy</td> <td class="incremental">Separate installs, multi-site (maybe OG)</td></tr>
+      <tr class="incremental"><td>Simplified server administration</td> <td class="incremental">Domain Access, OG, Single-site</td></tr>
+      <tr class="incremental"><td>Shared content</td> <td class="incremental">Domain Access, OG, Single-site</td></tr>
+      <tr class="incremental"><td>Per-department ACL</td> <td class="incremental">Single-site, OG</td></tr>
+      <tr class="incremental"><td>Per-department Views</td> <td class="incremental">Separate installs, multi-site (maybe OG)</td></tr>
+      <tr class="incremental"><td>Staggered migration</td> <td class="incremental">Separate installs, multi-site, Domain Access, proxy server shenanigans</td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+<section class="slide">
+  <h1>Mix and Match</h1>
+  <img class="vcenter" src="images/multisite-domainaccess.png"  />
+</section>
+
+
+
+
+
+
+
+
+
 <section class="slide" data-background="images/last-slide.png">
 
   <div class="vcenter" style="background-color: wheat;">
@@ -96,6 +233,8 @@
     <h2 style="margin-top: 1em;">Thank you!</h2>
   </div>
 </section>
+
+
 
 <section class="slide">
   <h1>Title</h1>
