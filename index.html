@@ -145,7 +145,7 @@
 
 <section class="slide">
   <h1>Separate sites</h1>
-  <div class="incremental" style="float: left; width 50%;">
+  <div class="incremental" style="float: left; width: 50%;">
     <h2>Benefits</h2>
     <ul>
       <li class="incremental">Standard platform</li>
@@ -154,12 +154,12 @@
       <li class="incremental">Mixed Drupal versions</li>
     </ul>
   </div>
-  <div class="incremental" style="float: right width 50%;">
+  <div class="incremental" style="float: right; width: 50%;">
     <h2>Drawbacks</h2>
     <ul>
       <li class="incremental">No economy of scale</li>
       <li class="incremental">No (intrinsic) standardization</li>
-      <li class="incremental"></li>
+      <li class="incremental">Many sites to have to manage</li>
       <li class="incremental"></li>
     </ul>
   </div>
@@ -220,28 +220,89 @@
   <h1>Example: Field Microsites</h1>
   <ul>
     <li class="incremental">Install profile for major exhibitions</li>
-    <li class="incremental">80% of a site in-a-box</li>
-    <li class="incremental"></li>
+    <li class="incremental">80% of a site in-a-box
+      <ul>
+        <li class="incremental">10 content types</li>
+        <li class="incremental">Media, WYSIWYG, text formats, user roles etc.</li>
+        <li class="incremental">Common navigation</li>
+      </ul>
+    </li>
   </ul>
-  <img src="images/field-microsites.png"  />
+  <img src="images/fieldmuseum-horse.jpg"  />
 </section>
-
-
-
-<div style="display: none">
-  Talk about separate sites.  Sub-types: Features, Install Profiles.
-  Example: Field Microsites
-</div>
 
 <section class="slide">
   <h1>Multi-site</h1>
   <img class="vcenter" src="images/multisite.png"  />
 </section>
 
-<div style="display: none">
-  Talk about multi-site.
-  Example: WUSTL
-</div>
+<section class="slide">
+  <h1>Multi-site</h1>
+  <ul>
+    <li class="incremental">Drupal feature since at least 4.5</li>
+    <li class="incremental">One code base, many sites</li>
+    <li class="incremental">"Separate sites with shared code"</li>
+  </ul>
+  <img src="images/multisite-files.png"  />
+</section>
+
+<section class="slide">
+  <h1>Multi-site</h1>
+  <h3>sites.php</h3>
+  <pre class="brush:php">
+    $sites['www.drupal.edu'] = 'main';
+
+    $sites['fapi.api.drupal.edu'] = 'fapi';
+
+    $sites['multisite.building.drupal.edu'] = 'multisite';
+
+    $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
+  </pre>
+  <img src="images/multisite-sites.png"  />
+</section>
+
+<section class="slide">
+  <h1>Multi-site</h1>
+  <div class="incremental" style="float: left; width: 50%;">
+    <h2>Benefits</h2>
+    <ul>
+      <li class="incremental"><em>Same as Separate Sites, plus...</em></li>
+      <li class="incremental">One codebase to update</li>
+      <li class="incremental">Lower memory overhead (APC)</li>
+    </ul>
+  </div>
+  <div class="incremental" style="float: right; width: 50%;">
+    <h2>Drawbacks</h2>
+    <ul>
+      <li class="incremental"><em>Same as Separate Sites, plus...</em></li>
+      <li class="incremental">Only one core version</li>
+      <li class="incremental">Multiple module versions are hard</li>
+    </ul>
+  </div>
+
+  <div style="clear: all">
+  </div>
+</section>
+
+<section class="slide">
+  <div class="vcenter">
+    <h1 style="text-align: left;">If you have one server admin team...</h1>
+    <h2 class="incremental" style="text-align: right;">... use Multi-site</h2>
+    <h1 class="incremental" style="text-align: left;">If you have many server admin teams...</h1>
+    <h2 class="incremental" style="text-align: right;">... use Separate sites</h2>
+  </div>
+</section>
+
+<section class="slide">
+  <h1>Example: Washington University St. Louis</h1>
+  <ul>
+    <li class="incremental">Drupal 6, Pre-features</li>
+    <li class="incremental">Partially built database dump</li>
+    <li class="incremental">4 themes to choose from</li>
+    <li class="incremental">Clone DB, flush cache, create settings.php, customize</li>
+  </ul>
+  <img src="images/wustl.jpg"  />
+</section>
 
 <section class="slide">
   <h1>Domain Access</h1>
