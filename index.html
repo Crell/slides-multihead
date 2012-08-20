@@ -142,7 +142,6 @@
   </ul>
 </section>
 
-
 <section class="slide">
   <h1>Separate sites</h1>
   <div class="incremental" style="float: left; width: 50%;">
@@ -228,7 +227,7 @@
       </ul>
     </li>
   </ul>
-  <img src="images/fieldmuseum-horse.jpg"  />
+  <a href="http://www.palantir.net/blog/using-drupal-7-create-microsites"><img class="casestudy" src="images/fieldmuseum-horse.jpg"  /></a>
 </section>
 
 <section class="slide">
@@ -301,7 +300,7 @@
     <li class="incremental">4 themes to choose from</li>
     <li class="incremental">Clone DB, flush cache, create settings.php, customize</li>
   </ul>
-  <img src="images/wustl.jpg"  />
+  <a class="casestudy" href="http://www.palantir.net/experience/washington-university-st-louis"><img src="images/wustl.jpg"  /></a>
 </section>
 
 <section class="slide">
@@ -311,7 +310,7 @@
 
 <div style="display: none">
   Talk about Domain Access.  Needs screen shots.  (Oh fuck...)
-  Example:
+  Example: Environment America (aka PIN, link to acquia's writeup)
 </div>
 
 <section class="slide">
@@ -328,6 +327,86 @@
   <h1 class="vcenter">Single-site</h1>
 </section>
 
+<section class="slide">
+  <div class="vcenter">
+    <h1>Just because it's different sites now doesn't mean it has to be</h1>
+    <h1 class="incremental">Just because you call it a "site" doesn't mean it is</h1>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="vcenter">
+    <h1>What does "site" mean?</h1>
+  </div>
+</section>
+
+<section class="slide">
+  <h1>What does "site" mean?</h1>
+  <ul>
+    <li class="incremental">A presence on the web</li>
+    <li class="incremental">An organization's home page</li>
+    <li class="incremental">A path root</li>
+    <li class="incremental">"What I have access to"</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Access control: Workbench Access</h1>
+  <ul>
+    <li class="incremental">Divide site into administrative sections</li>
+    <li class="incremental">Sections != path (unless you want it to be)</li>
+    <li class="incremental">Assign roles or users to sections</li>
+    <li class="incremental">Affects edit, not view</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Variable themes: Options</h1>
+  <ul>
+    <li class="incremental">Sections module (D6, needs port)</li>
+    <li class="incremental">Panels</li>
+    <li class="incremental">Panels Everywhere</li>
+    <li class="incremental"><a href="http://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_custom_theme/7"><code>hook_custom_theme()</code></a></li>
+    <li class="incremental">... Or just don't</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Single-site</h1>
+  <div class="incremental" style="float: left; width: 50%;">
+    <h2>Benefits</h2>
+    <ul>
+      <li class="incremental">No/little mental overhead</li>
+      <li class="incremental">One code base to manage</li>
+      <li class="incremental">Easy on the server admin and site-admin</li>
+    </ul>
+  </div>
+  <div class="incremental" style="float: right; width: 50%;">
+    <h2>Drawbacks</h2>
+    <ul>
+      <li class="incremental">Limited variability between "sites"</li>
+      <li class="incremental">Public understands only a single "site"</li>
+      <li class="incremental">Single navigation hierarchy</li>
+    </ul>
+  </div>
+
+  <div style="clear: all">
+  </div>
+</section>
+
+
+<section class="slide">
+  <h1>Example: </h1>
+  <ul>
+    <li class="incremental"></li>
+    <li class="incremental"></li>
+    <li class="incremental"></li>
+    <li class="incremental"></li>
+  </ul>
+  <img class="casestudy" src="images/uclaw.jpg"  />
+</section>
+
+
 <div style="display: none">
   Talk about Single site: Workbench Access, Panels Everywhere.
   Example, UC Law
@@ -335,10 +414,6 @@
 
 <div style="display: none">
   Talk about trade-offs.
-</div>
-
-<div style="display: none">
-  Trade-off-chart.
 </div>
 
 <section class="slide">
@@ -361,7 +436,7 @@
       <tr class="incremental"><td>Per-department Views</td> <td class="incremental">Separate installs, multi-site (maybe OG)</td></tr>
       <tr class="incremental"><td>Staggered migration</td> <td class="incremental">Separate installs, multi-site, Domain Access, proxy server shenanigans</td></tr>
       <tr class="incremental"><td>Per department theme</td> <td class="incremental">Separate installs, Multi-site, Domain Access, OG</td></tr>
-      <tr class="incremental"><td>Inexperienced site admins</td> <td class="incremental">Separate installs</td></tr>
+      <tr class="incremental"><td>Inexperienced site admins</td> <td class="incremental">Separate installs, Single-site</td></tr>
     </tbody>
   </table>
 </section>
@@ -388,7 +463,15 @@
   </ul>
 </section>
 
-
+<section class="slide">
+  <h1>Example: Barnard College</h1>
+  <ul>
+    <li class="incremental">50 departments and programs</li>
+    <li class="incremental">One site with Domain Access</li>
+    <li class="incremental">... and Workbench Access for even finer control</li>
+  </ul>
+  <a href="http://www.palantir.net/experience/barnard-college"><img class="casestudy" src="images/barnard.jpg"  /></a>
+</section>
 
 
 
@@ -397,53 +480,12 @@
 
 
 <section class="slide" data-background="images/last-slide.png">
-
   <div class="vcenter" style="background-color: wheat;">
     <h1>What did you think?</h1>
     <h2 style="margin-top: 1em;">Locate this session on the DrupalCon Munich website</h2>
     <h3 style="margin-top: 1em; text-align: center;"><a href="http://munich2012.drupal.org/program/sessions/multi-headed-drupal">http://munich2012.drupal.org/program/sessions/multi-headed-drupal</a></h3>
     <h2 style="margin-top: 1em;">Thank you!</h2>
   </div>
-</section>
-
-
-
-<section class="slide">
-  <h1>Title</h1>
-  <div class="incremental" style="float: left">
-    <h2>Title</h2>
-    <ul>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-  <div class="incremental" style="float: left">
-    <h2>Title</h2>
-    <ul>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-
-  <div style="clear: all">
-  </div>
-</section>
-
-<section class="slide">
-  <h1>Title</h1>
-  <div>Description</div>
-
-  <table class="visible" style="width: 100%; border: 1px solid black;">
-    <thead>
-      <tr><th>Method</th> <th>Path</th> <th>Accept header</th> <th>Result</th></tr>
-    </thead>
-    <tbody>
-      <tr class="incremental"><td>GET</td> <td>node/1</td> <td>text/html</td> <td class="incremental"><strong>Node view page</strong></td></tr>
-      <tr class="incremental"><td>GET</td> <td>node/1</td> <td>application/json</td> <td class="incremental"><strong>JSON-LD record</strong></td></tr>
-      <tr class="incremental"><td>POST</td> <td>system/form/node_edit</td> <td>text/html</td> <td class="incremental"><strong>Submit a node form and redirect</strong></td></tr>
-      <tr class="incremental"><td>PUT</td> <td>node/1</td> <td>application/json</td> <td class="incremental"><strong>Overwrite the node exactly</strong></td></tr>
-    </tbody>
-  </table>
 </section>
 
   </body>
