@@ -137,8 +137,6 @@
   <ul>
     <li class="incremental">Never mind, KISS</li>
     <li class="incremental">Give everyone their own Drupal</li>
-    <li class="incremental"></li>
-    <li class="incremental"></li>
   </ul>
 </section>
 
@@ -159,7 +157,6 @@
       <li class="incremental">No economy of scale</li>
       <li class="incremental">No (intrinsic) standardization</li>
       <li class="incremental">Many sites to have to manage</li>
-      <li class="incremental"></li>
     </ul>
   </div>
 
@@ -179,9 +176,24 @@
 <section class="slide">
   <h1>Install profiles</h1>
   <ul>
-    <li class="incremental">All the power of a module...</li>
-    <li class="incremental">... plus install wizards</li>
-    <li class="incremental"></li>
+    <li class="incremental">Since Drupal 5</li>
+    <li class="incremental">Quasi-modules in Drupal 7</li>
+    <li class="incremental">All the power of a module...
+      <ul>
+        <li class="incremental">Hooks</li>
+        <li class="incremental">Alter hooks</li>
+      </ul>
+    </li>
+    <li class="incremental">... plus install wizards
+      <ul>
+        <li class="incremental">Create content types</li>
+        <li class="incremental">Create content</li>
+        <li class="incremental">Create roles</li>
+        <li class="incremental">Create users</li>
+        <li class="incremental">Set variables</li>
+        <li class="incremental">... Do anything that has an API</li>
+      </ul>
+    </li>
   </ul>
 </section>
 
@@ -194,7 +206,6 @@
     <h1 class="incremental"><em>Distributions</em></h1>
   </div>
 </section>
-
 
 <section class="slide">
   <h1>Distributions</h1>
@@ -211,12 +222,12 @@
         <li class="incremental"><em>Your custom distribution here</em></li>
       </ul>
     </li>
-    <li class="incremental"><a href="http://drupal.org/projects/profiles">Many many more...</a></li>
+    <li class="incremental"><a href="http://drupal.org/project/distributions">Many many more...</a></li>
   </ul>
 </section>
 
 <section class="slide">
-  <h1>Example: Field Microsites</h1>
+  <h1>Example: Field Museum Microsites</h1>
   <ul>
     <li class="incremental">Install profile for major exhibitions</li>
     <li class="incremental">80% of a site in-a-box
@@ -307,6 +318,99 @@
   <h1>Domain Access</h1>
   <img class="vcenter" src="images/domainaccess.png"  />
 </section>
+
+<section class="slide">
+  <h1>Domain Access</h1>
+  <ul>
+    <li class="incremental">Access Control module</li>
+    <li class="incremental">Node grants (here be dragons)</li>
+    <li class="incremental">Domain == subsite</li>
+    <li class="incremental">Affects node view</li>
+    <li class="incremental">Suite of modules</li>
+  </ul>
+  <img src="images/multisite-files.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Basics</h1>
+  <img src="images/domainaccess/domain-list.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Basics</h1>
+  <img src="images/domainaccess/domain-edit.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Settings overrides</h1>
+  <img src="images/domainaccess/domain-settings.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Themes</h1>
+  <img src="images/domainaccess/domain-theme.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Themes</h1>
+  <img src="images/domainaccess/domain-theme-color.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Timezones</h1>
+  <img src="images/domainaccess/domain-timezone.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Node editing</h1>
+  <img src="images/domainaccess/domain-node-edit.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Node editing</h1>
+  <img src="images/domainaccess/domain-node-view.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access: Node editing</h1>
+  <img src="images/domainaccess/domain-content-list.png"  />
+</section>
+
+<section class="slide">
+  <h1>Domain Access</h1>
+  <div class="incremental" style="float: left; width: 50%;">
+    <h2>Benefits</h2>
+    <ul>
+      <li class="incremental">One site to manage</li>
+      <li class="incremental">Content sharing</li>
+      <li class="incremental">Per-domain theme</li>
+      <li class="incremental">Some system configuration per-domain</li>
+      <li class="incremental">Consistent architecture</li>
+    </ul>
+  </div>
+  <div class="incremental" style="float: right; width: 50%;">
+    <h2>Drawbacks</h2>
+    <ul>
+      <li class="incremental">Consistent architecture</li>
+      <li class="incremental">Uses node access</li>
+    </ul>
+  </div>
+
+  <div style="clear: all">
+  </div>
+</section>
+
+<section class="slide">
+  <h1>Example: Environment America</h1>
+  <ul>
+    <li class="incremental">One install with Domain Access</li>
+    <li class="incremental">National site, various state-level sites</li>
+    <li class="incremental">Easy content syndication</li>
+    <li class="incremental">Way cheaper than many separate sites</li>
+  </ul>
+  <div style="margin-left: auto; margin-right: auto;"><a href="http://www.acquia.com/resources/case-study/environment-america"><img class="casestudy" src="images/environment-america.jpg"  /></a></div>
+</section>
+
 
 <div style="display: none">
   Talk about Domain Access.  Needs screen shots.  (Oh fuck...)
