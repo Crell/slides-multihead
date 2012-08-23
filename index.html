@@ -80,11 +80,11 @@
 
 <section class="slide">
   <h1>What we do</h1>
-  <img style="position: absolute; top: 30px; left: -100px;" src="images/sites/barnard-1.jpg" />
-  <img style="position: absolute; top: 60px; left: -70px;" class="incremental" src="images/sites/foreign-affairs-1.jpg" />
-  <img style="position: absolute; top: 90px; left: -40px;" class="incremental" src="images/sites/fieldmuseum-1.jpg" />
-  <img style="position: absolute; top: 120px; left: -10px;" class="incremental" src="images/sites/opensource-1.jpg" />
-  <img style="position: absolute; top: 150px; left: 20px;" class="incremental" src="images/sites/marketplace-1.jpg" />
+<!--  <img style="position: absolute; top: 30px; left: -80px;" src="images/sites/barnard-1.jpg" />-->
+  <img style="position: absolute; top: 60px; left: -50px;" src="images/sites/foreign-affairs-1.jpg" />
+  <img style="position: absolute; top: 90px; left: -10px;" class="incremental" src="images/sites/fieldmuseum-1.jpg" />
+  <img style="position: absolute; top: 120px; left: 20px;" class="incremental" src="images/sites/opensource-1.jpg" />
+  <img style="position: absolute; top: 150px; left: 50px;" class="incremental" src="images/sites/marketplace-1.jpg" />
 </section>
 
 <section class="slide">
@@ -165,11 +165,11 @@
 </section>
 
 <section class="slide">
-  <h1>Features</h1>
+  <h1>Features.module</h1>
   <ul>
     <li class="incremental">Dump configuration to code</li>
     <li class="incremental">Packages of functionality</li>
-    <li class="incremental">Easily distributable</li>
+    <li class="incremental">Easily distributable (Sometimes)</li>
   </ul>
 </section>
 
@@ -253,22 +253,53 @@
     <li class="incremental">One code base, many sites</li>
     <li class="incremental">"Separate sites with shared code"</li>
   </ul>
-  <img src="images/multisite-files.png"  />
+
+  <div class="incremental">
+    <pre class="brush:text">
+/
+  sites/
+    default/
+      settings.php
+    www.drupal.edu/
+      settings.php
+    biology.drupal.edu/
+      settings.php
+    </pre>
+  </div>
 </section>
 
 <section class="slide">
   <h1>Multi-site</h1>
-  <h3>sites.php</h3>
-  <pre class="brush:php">
-    $sites['www.drupal.edu'] = 'main';
+  <h3>sites/sites.php</h3>
 
-    $sites['fapi.api.drupal.edu'] = 'fapi';
+  <div>
+    <pre class="brush:php">
+      $sites['www.drupal.edu'] = 'main';
 
-    $sites['multisite.building.drupal.edu'] = 'multisite';
+      $sites['fapi.api.drupal.edu'] = 'fapi';
 
-    $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
-  </pre>
-  <img src="images/multisite-sites.png"  />
+      $sites['multisite.building.drupal.edu'] = 'multisite';
+
+      $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
+    </pre>
+  </div>
+
+  <div class="incremental">
+    <pre class="brush:text">
+/
+  sites/
+    sites.php
+    default/
+      settings.php
+    www.drupal.edu/
+      settings.php
+    fapi/
+      settings.php
+    da_fundraising/
+      settings.php
+    </pre>
+  </div>
+
 </section>
 
 <section class="slide">
@@ -279,6 +310,7 @@
       <li class="incremental"><em>Same as Separate Sites, plus...</em></li>
       <li class="incremental">One codebase to update</li>
       <li class="incremental">Lower memory overhead (APC)</li>
+      <li class="incremental">Table sharing (but don't do that!)</li>
     </ul>
   </div>
   <div class="incremental" style="float: right; width: 50%;">
@@ -324,7 +356,7 @@
 </section>
 
 <section class="slide">
-  <h1>Domain Access</h1>
+  <h1><a href="http://drupal.org/project/domain">Domain Access</a></h1>
   <ul>
     <li class="incremental">Access Control module</li>
     <li class="incremental">Node grants (here be dragons)</li>
@@ -332,7 +364,6 @@
     <li class="incremental">Affects node view</li>
     <li class="incremental">Suite of modules</li>
   </ul>
-  <img src="images/multisite-files.png"  />
 </section>
 
 <section class="slide">
@@ -396,6 +427,7 @@
     <h2>Drawbacks</h2>
     <ul>
       <li class="incremental">Consistent architecture</li>
+      <li class="incremental">Must use multiple domains</li>
       <li class="incremental">Uses node access</li>
     </ul>
   </div>
@@ -418,6 +450,95 @@
 <section class="slide">
   <h1>Organic Groups</h1>
   <img class="vcenter" src="images/organicgroups.png"  />
+</section>
+
+<section class="slide">
+  <h1><a href="http://drupal.org/project/og">Organic Groups</a></h1>
+  <ul>
+    <li class="incremental">Very old Contrib; totally rewritten for Drupal 7</li>
+    <li class="incremental">Any entity == "group"</li>
+    <li class="incremental">Any entity belongs to a "group"</li>
+    <li class="incremental">Users join groups</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Organic Groups: Access control</h1>
+  <ul>
+    <li class="incremental">Per-group Roles</li>
+    <li class="incremental">Per-group user membership</li>
+    <li class="incremental">Per group node/field edit/delete permissions</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Organic Groups: Integration</h1>
+  <ul>
+    <li class="incremental">Views plugins: Included</li>
+    <li class="incremental">Ctools/Panels Context plugins: Simple</li>
+    <li class="incremental">Very good Chaos suite integration</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Organic Groups: Group nodes</h1>
+  <img class="vcenter" src="images/og-node-config.png"  />
+</section>
+
+<section class="slide">
+  <h1>Organic Groups: Permissions</h1>
+  <img class="vcenter" src="images/og-permission.png"  />
+</section>
+
+<section class="slide">
+  <h1>Organic Groups</h1>
+  <ul>
+    <li class="incremental">Views plugins: Included</li>
+    <li class="incremental">Ctools/Panels Context plugins: Simple</li>
+    <li class="incremental">Very good Chaos suite integration</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Organic Groups</h1>
+  <div class="incremental" style="float: left; width: 50%;">
+    <h2>Benefits</h2>
+    <ul>
+      <li class="incremental">One site to manage</li>
+      <li class="incremental">Content sharing</li>
+      <li class="incremental">Per-group theme</li>
+      <li class="incremental">Only one domain</li>
+      <li class="incremental">Consistent architecture</li>
+    </ul>
+  </div>
+  <div class="incremental" style="float: right; width: 50%;">
+    <h2>Drawbacks</h2>
+    <ul>
+      <li class="incremental">Only one domain</li>
+      <li class="incremental">Consistent architecture</li>
+      <li class="incremental">Still site-wide settings</li>
+      <li class="incremental">Everything gets a little bit more complicated</li>
+    </ul>
+  </div>
+
+  <div style="clear: all">
+  </div>
+</section>
+
+<section class="slide">
+  <h1>Example: Mystery University (in progress)</h1>
+  <ul>
+    <li class="incremental">Every College or Department is a Group
+      <ul>
+        <li class="incremental">Group node has hidden settings (default slideshow)</li>
+        <li class="incremental">Lots of Entity Reference</li>
+      </ul>
+    </li>
+    <li class="incremental">Panels Everywhere</li>
+    <li class="incremental">Panelizer</li>
+    <li class="incremental">Separate roles per department</li>
+    <li class="incremental">Very similar themes</li>
+  </ul>
 </section>
 
 <div style="display: none">
@@ -498,25 +619,39 @@
 
 
 <section class="slide">
-  <h1>Example: </h1>
+  <h1>Example: Mt. Holyoke College</h1>
   <ul>
-    <li class="incremental"></li>
-    <li class="incremental"></li>
-    <li class="incremental"></li>
-    <li class="incremental"></li>
+    <li class="incremental">Many departments, centrally managed</li>
+    <li class="incremental">Workbench access</li>
+    <li class="incremental">All departments have the same design</li>
   </ul>
-  <img class="casestudy" src="images/uclaw.jpg"  />
+  <a href="http://www.mtholyoke.edu"><img class="casestudy" src="images/mtholyoke.jpg"  /></a>
 </section>
 
+<section class="slide">
+  <h1>Mix and Match</h1>
+  <img class="vcenter" src="images/multisite-domainaccess.png"  />
+</section>
 
-<div style="display: none">
-  Talk about Single site: Workbench Access, Panels Everywhere.
-  Example, UC Law
-</div>
+<section class="slide">
+  <h1>Multi-site can host any combination of sites</h1>
+  <ul>
+    <li class="incremental">Multi-site / OG</li>
+    <li class="incremental">Multi-site / Domain Access</li>
+    <li class="incremental">Multi-site / Workbench Access</li>
+    <li class="incremental">Multi-site / Domain Access / OG</li>
+  </ul>
+</section>
 
-<div style="display: none">
-  Talk about trade-offs.
-</div>
+<section class="slide">
+  <h1>Example: Barnard College</h1>
+  <ul>
+    <li class="incremental">50 departments and programs</li>
+    <li class="incremental">One site with Domain Access</li>
+    <li class="incremental">... and Workbench Access for even finer control</li>
+  </ul>
+  <a href="http://www.palantir.net/experience/barnard-college"><img class="casestudy" src="images/barnard.jpg"  /></a>
+</section>
 
 <section class="slide">
   <h1>Decisions, decisions...</h1>
@@ -549,37 +684,6 @@
       <img style="width: 40%;" src="images/barbosa.gif" data-credit="http://www.killerfilm.com/articles-2/read/captain-barbados-confirmed-for-pirates-4-14377" />
     </div>
 </section>
-
-<section class="slide">
-  <h1>Mix and Match</h1>
-  <img class="vcenter" src="images/multisite-domainaccess.png"  />
-</section>
-
-<section class="slide">
-  <h1>Multi-site can host any combination of sites</h1>
-  <ul>
-    <li class="incremental">Multi-site / OG</li>
-    <li class="incremental">Multi-site / Domain Access</li>
-    <li class="incremental">Multi-site / Workbench Access</li>
-    <li class="incremental">Multi-site / Domain Access / OG</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h1>Example: Barnard College</h1>
-  <ul>
-    <li class="incremental">50 departments and programs</li>
-    <li class="incremental">One site with Domain Access</li>
-    <li class="incremental">... and Workbench Access for even finer control</li>
-  </ul>
-  <a href="http://www.palantir.net/experience/barnard-college"><img class="casestudy" src="images/barnard.jpg"  /></a>
-</section>
-
-
-
-
-
-
 
 <section class="slide" data-background="images/last-slide.png">
   <div class="vcenter" style="background-color: wheat;">
